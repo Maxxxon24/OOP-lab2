@@ -1,0 +1,36 @@
+plugins {
+    id 'org.jetbrains.kotlin.js' version '1.3.61'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+def kotlinx_html_version = "0.7.1"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+    implementation "org.jetbrains.kotlinx:kotlinx-html-js:${kotlinx_html_version}"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-js"
+}
+
+kotlin.target.browser { }
+
+//browserRun {
+//    boolean open = false;
+//    int port = 8080
+//    devServer = devServer.copy(
+//            devServer.inline,
+//            devServer.lazy,
+//            devServer.noInfo,
+//            open,
+//            devServer.overlay,
+//            port,
+//            devServer.proxy,
+//           devServer.contentBase,
+//    )
+//}
